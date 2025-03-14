@@ -33,16 +33,21 @@ const Faq = () => {
     },
   ];
   return (
-    <div className="bg-white w-3/4 mx-auto p-8 rounded-lg shadow-lg">
+    <div className="bg-white rounded-lg shadow-lg w-full lg:w-1/2 m-5 p-5">
       <div className="flex items-center py-4">
         <img alt="star icon" src={iconStar} className="mr-4" />
         <h1 className="text-5xl text-darkPurple font-work font-bold">FAQs</h1>
       </div>
       <ul>
         {faqQuestions.map((faq, index) => (
-          <li key={index} className="py-4 border-b ">
+          <li
+            key={index}
+            className={`py-4 border-lightPink  ${
+              index !== faqQuestions.length - 1 ? "border-b-2" : ""
+            }`}
+          >
             <div className="flex justify-between">
-              <p className="text-darkPurple font-work font-bold">
+              <p className="text-darkPurple font-work font-bold text-base">
                 {faq.question}
               </p>
               <img
@@ -53,7 +58,7 @@ const Faq = () => {
               />
             </div>
             {openIndex === index && (
-              <p className="text-grayishPurple text-semibold font-work">
+              <p className="text-grayishPurple text-semibold font-work text-base">
                 {faq.answer}
               </p>
             )}

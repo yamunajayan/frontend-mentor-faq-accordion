@@ -13,8 +13,8 @@ export default {
         darkPurple: "hsl(292, 42%, 14%)",
       },
       screens: {
-        sm: "375px", // Mobile design reference
-        lg: "1440px", // Desktop design reference
+        sm: "375px",
+        lg: "1240px", // Desktop design reference
       },
       maxWidth: {
         container: "1440px", // Restrict max width on large screens
